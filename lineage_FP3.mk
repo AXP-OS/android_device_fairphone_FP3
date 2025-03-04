@@ -43,3 +43,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := Fairphone/FP3/FP3:13/6.A.023.1/gms-497e9bef:user/release-keys
+
+# enable AXP.OS vendor
+$(call inherit-product, vendor/axp/config/common.mk)
