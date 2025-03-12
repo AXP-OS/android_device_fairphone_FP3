@@ -292,15 +292,7 @@
          <instance>default</instance>
        </interface>
    </hal>
-    <hal format="hidl">
-        <name>com.qualcomm.qti.uceservice</name>
-        <transport>hwbinder</transport>
-        <version>2.3</version>
-        <interface>
-            <name>IUceService</name>
-            <instance>com.qualcomm.qti.uceservice</instance>
-        </interface>
-    </hal>
+    
     <hal format="hidl">
         <name>vendor.display.color</name>
         <transport>hwbinder</transport>
@@ -386,11 +378,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.iop</name>
-        <transport arch="32+64">passthrough</transport>
-        <version>2.0</version>
-    </hal>
+    
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
@@ -522,25 +510,9 @@
             <instance>uimRemoteServer1</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.tui_comm</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITuiComm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+    
     <!--  Soter service -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.soter</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISoter</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+    
     <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
         <transport>hwbinder</transport>
@@ -586,19 +558,7 @@
             <instance>cnd</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>com.qualcomm.qti.wifidisplayhal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDSManager</name>
-            <instance>wifidisplaydshal</instance>
-        </interface>
-        <interface>
-            <name>IHDCPSession</name>
-            <instance>wifidisplayhdcphal</instance>
-        </interface>
-    </hal>
+    
     <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
