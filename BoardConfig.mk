@@ -54,7 +54,7 @@ TARGET_OTA_ASSERT_DEVICE := FP3
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_SUPPORTS_SOUND_TRIGGER := false
 USE_XML_AUDIO_POLICY_CONF := 1
 
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -109,7 +109,6 @@ USE_CUSTOM_AUDIO_POLICY := 1
 
 
 # Bluetooth
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 
@@ -266,7 +265,6 @@ BOARD_AVB_SYSTEM_ROLLBACK_INDEX := 0
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Disable verity and descriptor checking
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 
 
 # Vendor Security Patch Level
@@ -290,3 +288,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
 -include vendor/fairphone/FP3/BoardConfigVendor.mk
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_DEBUG_INFO := false
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
