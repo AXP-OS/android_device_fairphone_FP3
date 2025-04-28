@@ -18,7 +18,6 @@
 $(call inherit-product, vendor/fairphone/FP3/FP3-vendor.mk)
 
 # Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 
 # System properties
@@ -144,7 +143,6 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    AntHalService \
     android.hardware.bluetooth.audio@2.0-impl:32 \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
@@ -262,11 +260,9 @@ PRODUCT_VENDOR_PROPERTIES += ro.hardware.egl=adreno
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor \
-    android.hardware.drm@1.4-service.clearkey
 
 PRODUCT_VENDOR_PROPERTIES += \
-    drm.service.enabled=true
+    drm.service.enabled=false
 
 
 # Encryption
@@ -484,7 +480,7 @@ PRODUCT_PACKAGES += \
 
 # OEM Unlock reporting
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.oem_unlock_supported=1
+    ro.oem_unlock_supported=0
 
 
 # Netd
