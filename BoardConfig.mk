@@ -54,7 +54,7 @@ TARGET_OTA_ASSERT_DEVICE := FP3
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_SUPPORTS_SOUND_TRIGGER := false
 USE_XML_AUDIO_POLICY_CONF := 1
 
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
@@ -109,7 +109,6 @@ USE_CUSTOM_AUDIO_POLICY := 1
 
 
 # Bluetooth
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 
@@ -260,13 +259,12 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 # Treble
 BOARD_AVB_ENABLE := true
 # Enable chain partition for system, to facilitate system-only OTA in Treble.
-BOARD_AVB_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
-BOARD_AVB_SYSTEM_ALGORITHM := SHA256_RSA2048
+#BOARD_AVB_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+#BOARD_AVB_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX := 0
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Disable verity and descriptor checking
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 
 
 # Vendor Security Patch Level
@@ -294,3 +292,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # even though we include vendor/axp/config/common.mk we need to include AXP's own BoardConfig
 # (after the above definitions & includes), too so we we can make use of the conditions within
 include vendor/axp/BoardConfigVendor.mk
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_DEBUG_INFO := false
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
