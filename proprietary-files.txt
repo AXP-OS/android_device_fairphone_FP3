@@ -789,7 +789,7 @@ vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 
 # etc-vintf manifests
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 -vendor/etc/vintf/manifest/vendor.nxp.hardware.nfc@2.0-service.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
