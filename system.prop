@@ -195,8 +195,17 @@ persist.rcs.supported=0
 
 # WFD
 #property to enable user to access Google WFD settings
-persist.debug.wfd.enable=1
+persist.debug.wfd.enable=0
 #selects CoreSight configuration to enable
 persist.debug.coresight.config=stm-events
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
+
+ro.oem_unlock_supported=0
+
+sys.oem_unlock_allowed=0
+
+ro.boot.flash.locked=0
+
+drm.service.enabled=false
+
